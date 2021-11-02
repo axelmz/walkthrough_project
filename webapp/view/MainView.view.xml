@@ -1,0 +1,13 @@
+<mvc:View controllerName="walkthroughproject.controller.MainView"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Button
+		text="{i18n>showHelloButtonText}"
+		press=".onShowHello"/>
+	<Input
+		value="{/recipient/name} {/recipient/test}"
+		description="Hello {/recipient/name}" 
+		valueLiveUpdate="true" 
+		width="60%"/>
+		<!---El atributo values recibe el texto desde el modelo del JSON en el controlador-->
+</mvc:View>
