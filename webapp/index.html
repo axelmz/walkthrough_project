@@ -11,12 +11,14 @@
 		    data-sap-ui-libs="sap.m"   
 		    data-sap-ui-compatVersion="edge"
 		    data-sap-ui-async="true"
-		    data-sap-ui-onInit="module:walkthroughproject/index"
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
 		    data-sap-ui-resourceroots='{
 			"walkthroughproject": "./"
 		}'
         ></script>
+		<!--data-sap-ui-onInit="module:walkthroughproject/index"-->
     </head>
     <body class="sapUiBody" id="content">
+		<div data-sap-ui-component data-name="walkthroughproject" data-id="container" data-settings='{"id" : "walkthroughproject"}'></div>
     </body>
 </html>

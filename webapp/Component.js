@@ -10,14 +10,9 @@ sap.ui.define([
 	return UIComponent.extend("walkthroughproject.Component", {
 
 		metadata : {
-			"interfaces": ["sap.ui.core.IAsyncContentCreation"],
-			"rootView": {
-			   "viewName": "walkthroughproject.view.MainView",
-			   "type": "XML",
-			   /*"async": true, // implicitly set via the sap.ui.core.IAsyncContentCreation interface*/
-			   "id": "app"
-			}
-		 },
+            interfaces: ["sap.ui.core.IAsyncContentCreation"],
+            manifest: "json"
+      },
 
 		init: function () {
 			// call the base component's init function
