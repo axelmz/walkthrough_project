@@ -16,8 +16,8 @@ sap.ui.define([
             // show message
             MessageToast.show(sMsg);
          },
-         onOpenDialog : function () {
 
+         onOpenDialog : function () {
 			// create dialog lazily
 			if (!this.pDialog) {
 				// @ts-ignore
@@ -28,6 +28,12 @@ sap.ui.define([
 			this.pDialog.then(function(oDialog) {
 				oDialog.open();
 			});
+		},
+
+        onCloseDialog : function () {
+			// note: We don't need to chain to the pDialog promise, since this event-handler
+			// is only called from within the loaded dialog itself.
+			this.byId("helloDialog").close();
 		}
     });
  });
