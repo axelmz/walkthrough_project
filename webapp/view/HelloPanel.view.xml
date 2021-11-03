@@ -10,6 +10,7 @@
             <Button
                 id="helloDialogButton"
                 text="{i18n>openDialogButtonText}"
+                icon="sap-icon://add-document"
                 press=".onOpenDialog"
                 class="sapUiSmallMarginEnd"/>
             <Button
