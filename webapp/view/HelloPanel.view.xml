@@ -24,7 +24,7 @@
                 width="60%"/>
                 <!---El atributo values recibe el texto desde el modelo del JSON en el controlador-->
             <FormattedText
-                htmlText="Hello {/recipient/name}" 
+                htmlText="Hello {/recipient/name}!!" 
                 class="sapUiSmallMargin sapThemeHighlight -asColor myCustomText"
                 />
         </content>					
