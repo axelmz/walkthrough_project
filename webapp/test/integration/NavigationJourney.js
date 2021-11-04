@@ -7,8 +7,10 @@ sap.ui.define([
 ], function (mockserver) {
 	"use strict";
 
+	// @ts-ignore
 	QUnit.module("Navigation");
 
+	// @ts-ignore
 	opaTest("Should open the Hello dialog", function (Given, When, Then) {
 		// initialize the mock server
 		mockserver.init();
