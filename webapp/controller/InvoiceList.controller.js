@@ -28,6 +28,11 @@ sap.ui.define([
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
 			//console.log(oList);
+		},
+
+		onPress: function (oEvent) {
+			var oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("detail");
 		}
 
 	});

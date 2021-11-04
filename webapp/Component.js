@@ -34,7 +34,7 @@ sap.ui.define([
 			 this.setModel(i18nModel, "i18n");
 			
 			 // enable routing
-			//this.getRouter().initialize();
+			this.getRouter().initialize();
 
 			// set the device model
 			//this.setModel(models.createDeviceModel(), "device");
