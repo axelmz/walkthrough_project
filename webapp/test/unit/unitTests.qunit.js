@@ -8,6 +8,7 @@ sap.ui.getCore().attachInit(function () {
 		//"walkthrough_project/test/unit/AllTests"
 		"walkthrough_project/test/unit/model/formatter"
 	], function () {
+		// @ts-ignore
 		QUnit.start();
 	});
 });

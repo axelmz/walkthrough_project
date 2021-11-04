@@ -6,6 +6,7 @@ sap.ui.define([
 ], function (formatter, ResourceModel) {
 	"use strict";
 
+	// @ts-ignore
 	QUnit.module("Formatting functions", {
 		beforeEach: function () {
 			this._oResourceModel = new ResourceModel({
@@ -18,6 +19,7 @@ sap.ui.define([
 	});
 
 
+	// @ts-ignore
 	QUnit.test("Should return the translated texts", function (assert) {
 
 		// Arrange
