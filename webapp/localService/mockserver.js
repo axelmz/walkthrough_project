@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (MockServer, JSONModel, UriParameters, Log) {
     "use strict";
 
-    var oMockServer,
+    /*var oMockServer,
         _sAppPath = "walkthroughproject/",
         _sJsonFilesPath = _sAppPath + "localService/mockdata";
 
@@ -19,7 +19,7 @@ sap.ui.define([
          * @protected
          * @param {object} [oOptionsParameter] init parameters for the mockserver
          * @returns{Promise} a promise that is resolved when the mock server has been started
-         */
+         *
         init: function (oOptionsParameter) {
             var oOptions = oOptionsParameter || {};
 
@@ -106,11 +106,36 @@ sap.ui.define([
         /**
          * @public returns the mockserver of the app, should be used in integration tests
          * @returns {sap.ui.core.util.MockServer} the mockserver instance
-         */
+         *
         getMockServer: function () {
             return oMockServer;
         }
     };
 
-    return oMockServerInterface;
+    return oMockServerInterface;*/
+
+    return {
+		init: function () {
+            console.log("This is a test");
+			// create
+			var oMockServer = new MockServer({
+				rootUri: "https://services.odata.org/V2/Northwind/Northwind.svc/"
+			});
+
+			var oUriParameters = new UriParameters(window.location.href);
+
+			// configure mock server with a delay
+			MockServer.config({
+				autoRespond: true,
+				autoRespondAfter: oUriParameters.get("serverDelay") || 500
+			});
+
+			// simulate
+			var sPath = sap.ui.require.toUrl("walkthroughproject/localService");
+			oMockServer.simulate(sPath + "/metadata.xml", sPath + "/mockdata");
+
+			// start
+			oMockServer.start();
+		}
+	};
 });
