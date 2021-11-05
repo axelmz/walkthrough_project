@@ -36,8 +36,10 @@ sap.ui.define([
 			 // enable routing
 			this.getRouter().initialize();
 
-			// set the device model
-			//this.setModel(models.createDeviceModel(), "device");
+			// set device model
+			var oDeviceModel = new JSONModel(Device);
+			oDeviceModel.setDefaultBindingMode("OneWay");
+			this.setModel(oDeviceModel, "device");
 		}
 	});
 });
